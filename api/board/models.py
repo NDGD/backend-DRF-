@@ -9,7 +9,7 @@ class Blog(models.Model):
     # 2. 제목
     title = models.CharField(max_length=100)
     # 3. 작성일
-    created_at = models.DateTimeField(default=timezone.now())
+    created_at = models.DateTimeField(auto_now=True)
     # 4. 작성자
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     # 5. 본문
