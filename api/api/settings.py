@@ -41,14 +41,16 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 새로 추가한 앱
     'accounts',
+    'board',
     # 설치한 라이브러리들
     'rest_framework',
     "corsheaders",
 ]
 
-REST_FRAMEWORK = { # 권한 설정
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ]
 }
 
@@ -133,3 +135,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+#User모델 추가
+AUTH_USER_MODEL = 'accounts.User'

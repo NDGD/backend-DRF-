@@ -1,10 +1,7 @@
-from django.urls import path
-from accounts import views
-from django.conf.urls import include
+from django.urls import path, include
+from . import views
 
-urlpatterns = [
-    path('accounts', views.account_list),
-    path('accounts/<int:pk>', views.account),
-    path('login', views.login),
-    path('auth', include('rest_framework.urls', namespace='rest_framework')),
-]
+urlpatterns =[
+    path('signup/', views.UserCreate.as_view()),
+    path('api-auth/', include('rest_framework.urls')),
+ ]

@@ -1,8 +1,15 @@
+from .models import User
 from rest_framework import serializers
-from .models import Account
 
-
-class AccountSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        user = User.objects.create_user(
+            email = validated_data['email'],
+            nickname = validated_data['nickname'],
+            name = validated_data['name'],
+            password = validated_data['password']
+        )
+        return user
     class Meta:
-        model = Account
-        fields = ['id', 'name', 'email', 'password']    #id는 pk로 자동 생성 필드
+        model = User
+        fields = ['nickname', 'email', 'name', 'password']
