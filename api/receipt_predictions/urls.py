@@ -6,5 +6,5 @@ app_name = 'receipt_predictions'
 urlpatterns=[
     # 수령액 예측
 
-    path('receipt predictions/api/', views.payments_pred, name='prediction-api'),
+    path('api/', views.payments_pred, name='prediction-api'),
 ]

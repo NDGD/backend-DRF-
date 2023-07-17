@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+
 
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -13,6 +16,7 @@ from transformers import BertTokenizer, BertModel
 def poss_pred():
     pass
 
+@method_decorator(csrf_exempt, name='dispatch')
 def payments_pred(request):
 
     if request.method == 'POST':
@@ -38,7 +42,7 @@ def payments_pred(request):
         posted = request.POST
 
         data = [posted.get('occurrenceType'), posted.get('local'), posted.get('workname'), posted.get('illness')]
-
+        
         input_topic = posted.get('paidType')
         input_scale = posted.get('scale')
 
