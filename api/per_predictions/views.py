@@ -32,13 +32,13 @@ def percentsge_pred(request):
         with open('static/dict4_for_per_pred.pickle', 'rb') as f:
             df4_dict = pickle.load(f)
 
-        df = pd.read_csv('./근로복지공단_업종별 산재신청 승인현황_20211231_for_per_pred.csv', encoding='ANSI')
+        df = pd.read_csv('static/근로복지공단_업종별 산재신청 승인현황_20211231_for_per_pred.csv', encoding='ANSI')
 
-        df2 = scale = pd.read_csv('./근로복지공단_업무상질병판정위원회 질병별 판정현황_20211231_for_per_pred.csv', encoding='ANSI')
+        df2 = scale = pd.read_csv('static/근로복지공단_업무상질병판정위원회 질병별 판정현황_20211231_for_per_pred.csv', encoding='ANSI')
 
-        df3 = pd.read_csv('./근로복지공단_특수형태근로종사자 산재처리현황_2021_for_per_pred.csv', encoding='ANSI')
+        df3 = pd.read_csv('static/근로복지공단_특수형태근로종사자 산재처리현황_2021_for_per_pred.csv', encoding='ANSI')
 
-        df4 = pd.read_csv('./근로복지공단_규모별 산재신청 승인현황_20211231_for_per_pred.csv', encoding='ANSI')
+        df4 = pd.read_csv('static/근로복지공단_규모별 산재신청 승인현황_20211231_for_per_pred.csv', encoding='ANSI')
 
         ###########################################
         posted = request.POST
