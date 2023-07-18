@@ -13,8 +13,6 @@ import torch
 from transformers import BertTokenizer, BertModel
 
 # Create your views here.
-def poss_pred():
-    pass
 
 @method_decorator(csrf_exempt, name='dispatch')
 def payments_pred(request):
