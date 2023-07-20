@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'board',
     'receipt_predictions',
     'per_predictions',
+    'review',
     # 설치한 라이브러리들
     'rest_framework',
     'rest_framework.authtoken',

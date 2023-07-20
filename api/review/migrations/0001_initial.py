@@ -15,19 +15,20 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Blog",
+            name="Review",
             fields=[
                 ("id", models.AutoField(primary_key=True, serialize=False)),
                 ("title", models.CharField(max_length=100)),
                 ("created_at", models.DateTimeField(auto_now=True)),
                 ("body", models.TextField()),
+                ("percentage", models.CharField(max_length=100)),
                 (
                     "user",
                     models.ForeignKey(
                         blank=True,
                         null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name="blogs",
+                        related_name="reviews",
                         to=settings.AUTH_USER_MODEL,
                     ),
                 ),
