@@ -60,11 +60,16 @@ def payments_pred(request):
             for d in word_vector.tolist()[0]:
                 vectors.append(d)
 
-        predicted_cluster = kmeans_loaded.predict([vectors])
-        topic_index = topic[input_topic]
+        try:
+            predicted_cluster = kmeans_loaded.predict([vectors])
+            topic_index = topic[input_topic]
 
-        result = round((cluster_name[0][predicted_cluster[0]][topic_index] + by_scale.loc[scale[input_scale],:][topic_index]) / 2)
+            result = round((cluster_name[0][predicted_cluster[0]][topic_index] + by_scale.loc[scale[input_scale],:][topic_index]) / 2)
 
-        response = {'result':result}
-        
-        return JsonResponse(response)
+            response = {'result':result}
+
+            return JsonResponse(response)
+        except KeyError as e:
+            response = {'error': str(e)}
+            
+            return JsonResponse(response, status=400)
