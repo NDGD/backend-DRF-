@@ -3,7 +3,7 @@
 
 - 🗓️프로젝트 기간: 2023-06-10 ~ 2023-07-22
 - 📌[시연영상](https://drive.google.com/drive/folders/180hnEssX2zDTlv8xGnfC0JiUbH4XvQEU)
-
+  
 ## NDGD 소개
 🚀인공지능을 이용한 개인 맞춤형 산재보상 정보 제공 서비스입니다.
 - 구현배경
