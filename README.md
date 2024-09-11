@@ -16,7 +16,7 @@
 ## Install
 git clone
 ```bash
-git clone
+git clone https://github.com/NDGD/backend-DRF-.git
 cd backend-DRF-
 ```
 make venv
