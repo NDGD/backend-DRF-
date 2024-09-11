@@ -11,7 +11,7 @@ import numpy as np
 import pickle
 
 
-@method_decorator(csrf_exempt, name='dispatch')
+@csrf_exempt
 def percentsge_pred(request):
     if request.method == 'POST':
         try:

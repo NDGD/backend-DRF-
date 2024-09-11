@@ -14,7 +14,7 @@ from transformers import BertTokenizer, BertModel
 
 # Create your views here.
 
-@method_decorator(csrf_exempt, name='dispatch')
+@csrf_exempt
 def payments_pred(request):
 
     if request.method == 'POST':
