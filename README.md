@@ -2,6 +2,7 @@
 ![image](https://github.com/user-attachments/assets/ed9f14a9-6d2c-4351-bf3b-3aa07db40f44)
 
 - 🗓️프로젝트 기간: 2023-06-10 ~ 2023-07-22
+- 📌[시연영상](https://drive.google.com/drive/folders/180hnEssX2zDTlv8xGnfC0JiUbH4XvQEU)
 
 ## NDGD 소개
 🚀인공지능을 이용한 개인 맞춤형 산재보상 정보 제공 서비스입니다.
@@ -49,3 +50,11 @@ python manage.py runserver
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"/>  
 
 - AI모델 임베딩을 위하여 Django 채택
+
+## 개발 포인트
+- 공공데이터 활용
+  - 공공데이터 포탈의 근로복지공단 data를 활용하여 AI 학습
+  - 한국어에 특화된 자연어 처리 모델 KoBert와 사전에 학습시킨 K-means 모델을 이용해 수령 가능한 보험금을 예측
+- 용이한 유지보수
+  - 근로복지공단에서 2018년 부터 매년 제공하는 공공데이터이기 때문에 확보의 지속성이 어느정도 보장
+  - 1년 단위로 최신 데이터를 제공받아 기존의 AI 알고리즘을 학습하여 서비스를 제공할 수 있음
